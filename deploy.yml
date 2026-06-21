@@ -1,0 +1,10 @@
+---
+- name: Deploy Artifact
+  hosts: localhost
+  tasks:
+
+    - name: Copy generated JAR
+      copy:
+        src: "/var/lib/jenkins/workspace/exp8/target/my-app-1.0-SNAPSHOT.jar"
+        dest: "/home/jey/t.jar"
+        remote_src: true
